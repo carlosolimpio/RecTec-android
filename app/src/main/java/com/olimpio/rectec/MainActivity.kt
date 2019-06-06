@@ -3,7 +3,6 @@ package com.olimpio.rectec
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         pluviometerAdapter = PluviometerAdapter(this, mPluviometers)
-        rvPluviometer.adapter = pluviometerAdapter
-        rvPluviometer.layoutManager = LinearLayoutManager(this)
-        rvPluviometer.smoothScrollToPosition(mPluviometers.size)
+        rv_measures.adapter = pluviometerAdapter
+        rv_measures.layoutManager = LinearLayoutManager(this)
+        rv_measures.smoothScrollToPosition(mPluviometers.size)
     }
 
 }

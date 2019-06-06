@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">RecTec</string>
     <string name="title_activity_pluviometer_info">Pluviometer Info</string>
+    <string name="pluv_id">ID:</string>
+    <string name="pluv_location">Local:</string>
+    <string name="name_pluviometer">Pluviômetro</string>
+    <string name="btn_measure_now">MEDIR AGORA</string>
 </resources>
