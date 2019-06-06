@@ -1,6 +1,7 @@
 package com.olimpio.rectec
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +19,11 @@ class PluviometerAdapter (private val context: Context, private var pluviometerL
 
     override fun onBindViewHolder(holder: PluviometerViewHolder, position: Int) {
         holder.bindView(pluviometerList[position])
+        holder.itemView.setOnClickListener {
+            var intent = Intent(context, PluviometerInfo::class.java)
+            intent.putExtra("itemPluivometer", pluviometerList[position])
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = pluviometerList.size
@@ -33,4 +39,5 @@ class PluviometerAdapter (private val context: Context, private var pluviometerL
             textViewLocation.text = pluviometer.location
         }
     }
+
 }

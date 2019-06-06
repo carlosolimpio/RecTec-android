@@ -30,6 +30,4 @@ class MainActivity : AppCompatActivity() {
         rvPluviometer.smoothScrollToPosition(mPluviometers.size)
     }
 
-
-
 }
