@@ -7,15 +7,31 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val mPluviometers: MutableList<Pluviometer> = mutableListOf(
-        Pluviometer("carlos", "metalico", "rural"),
-        Pluviometer("olimpio", "papel", "ufpe"),
-        Pluviometer("rodrigues", "madeira", "upe"),
-        Pluviometer("de", "pedra", "catolica"),
-        Pluviometer("Melo", "ouro", "nassau"),
-        Pluviometer("Filho", "prata", "fg"),
-        Pluviometer("carlos1", "cobre", "senac")
+    private val mMeasures: ArrayList<String> = arrayListOf(
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm",
+            "02/04/1994 - 10:35:12;999,0000 mm"
     )
+    private val mPluviometers: MutableList<Pluviometer> = mutableListOf(
+        Pluviometer("carlos", "metalico", "rural", mMeasures),
+        Pluviometer("olimpio", "papel", "ufpe", mMeasures),
+        Pluviometer("rodrigues", "madeira", "upe", mMeasures),
+        Pluviometer("de", "pedra", "catolica", mMeasures),
+        Pluviometer("Melo", "ouro", "nassau", mMeasures),
+        Pluviometer("Filho", "prata", "fg", mMeasures),
+        Pluviometer("carlos1", "cobre", "senac", mMeasures),
+        Pluviometer("carlos1", "cobre", "senac", mMeasures)
+        )
 
     lateinit var pluviometerAdapter: PluviometerAdapter
 
@@ -24,9 +40,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         pluviometerAdapter = PluviometerAdapter(this, mPluviometers)
-        rv_measures.adapter = pluviometerAdapter
-        rv_measures.layoutManager = LinearLayoutManager(this)
-        rv_measures.smoothScrollToPosition(mPluviometers.size)
+        rv_pluviometers.adapter = pluviometerAdapter
+        rv_pluviometers.layoutManager = LinearLayoutManager(this)
     }
 
 }

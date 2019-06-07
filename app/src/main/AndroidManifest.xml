@@ -10,7 +10,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".PluviometerInfo"
+                android:name=".PluviometerInfoActivity"
                 android:label="@string/title_activity_pluviometer_info"
                 >
         </activity>

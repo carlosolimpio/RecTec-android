@@ -5,4 +5,6 @@
     <string name="pluv_location">Local:</string>
     <string name="name_pluviometer">Pluviômetro</string>
     <string name="btn_measure_now">MEDIR AGORA</string>
+    <string name="measure_timestamp">DATA/HORA</string>
+    <string name="measure_value">MEDIDA</string>
 </resources>

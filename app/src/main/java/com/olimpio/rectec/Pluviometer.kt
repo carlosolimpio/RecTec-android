@@ -4,4 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Pluviometer(var name: String, var type: String, var location:String) : Parcelable
+data class Pluviometer(var id: String,
+                       var type: String,
+                       var location:String,
+                       var measures: ArrayList<String>) : Parcelable
