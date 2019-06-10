@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_pluviometer_info.view.*
 import kotlinx.android.synthetic.main.item_pluv_measure.view.*
 
-class PluviometerInfoAdapter(private val context: Context, private var mMeasure: MutableList<String>):
+class PluviometerInfoAdapter(private val context: Context, private var mMeasure: ArrayList<String>):
         RecyclerView.Adapter<PluviometerInfoAdapter.PluviometerInfoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): PluviometerInfoViewHolder {
